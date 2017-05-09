@@ -1,0 +1,22 @@
+button {
+  margin: 10px;  
+}
+
+p {
+  font-size: 14px;  
+  color: grey; 
+  line-height: 1.2;
+}
+
+.content {
+  font-size: 12px;
+}
+
+img {
+  margin-bottom: 10px;  
+}
+
+h3 {
+  color: grey; 
+  text-align: center;  
+}

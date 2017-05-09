@@ -1,0 +1,65 @@
+<div class="col-md-6 col-md-offset-3">
+    <form [formGroup]="addRecipeForm"  (ngSubmit)="addRecipe()" novalidate> 
+        <h2>Add Recipe</h2>
+        <div class="form-group">
+            <label for="addNameRecipe">Name</label>
+            <input type="text" class="form-control" name="addNameRecipe" formControlName="addNameRecipe"/>
+            <div class="alert alert-danger"
+                *ngIf="addRecipeForm.controls['addNameRecipe'].invalid && addRecipeForm.controls['addNameRecipe'].touched">
+                Literals only and can not be empty
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="addContentRecipe">Recipe</label>
+            <input type="text" class="form-control" name="addContentRecipe" formControlName="addContentRecipe"/>
+            <div class="alert alert-danger"
+                *ngIf="addRecipeForm.controls['addContentRecipe'].invalid && addRecipeForm.controls['addContentRecipe'].touched">
+                Literals only and can not be empty
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="addHrefRecipe">Href</label>
+            <input type="text" class="form-control" name="addHrefRecipe" formControlName="addHrefRecipe"/>
+            <div class="alert alert-danger"
+                *ngIf="addRecipeForm.controls['addHrefRecipe'].invalid && addRecipeForm.controls['addHrefRecipe'].touched">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="addCaloriesRecipe">Calories</label>
+            <input type="text" class="form-control" name="addCaloriesRecipe" formControlName="addCaloriesRecipe"/>
+            <div class="alert alert-danger"
+                *ngIf="addRecipeForm.controls['addCaloriesRecipe'].invalid && addRecipeForm.controls['addCaloriesRecipe'].touched">
+                Numbers only and can not be empty
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="addProteinRecipe">Protein</label>
+            <input type="text" class="form-control" name="addProteinRecipe" formControlName="addProteinRecipe"/>
+            <div class="alert alert-danger"
+                *ngIf="addRecipeForm.controls['addProteinRecipe'].invalid && addRecipeForm.controls['addProteinRecipe'].touched">
+                Numbers only and can not be empty
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="addFatRecipe">Fat</label>
+            <input type="text" class="form-control" name="addFatRecipe" formControlName="addFatRecipe"/>
+            <div class="alert alert-danger"
+                *ngIf="addRecipeForm.controls['addFatRecipe'].invalid && addRecipeForm.controls['addFatRecipe'].touched">
+                Numbers only and can not be empty
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="addCarbohydrateRecipe">Carbohydrate</label>
+            <input type="text" class="form-control" name="addCarbohydrateRecipe" formControlName="addCarbohydrateRecipe"/>
+            <div class="alert alert-danger"
+                *ngIf="addRecipeForm.controls['addCarbohydrateRecipe'].invalid && addRecipeForm.controls['addCarbohydrateRecipe'].touched">
+                Numbers only and can not be empty
+            </div>
+        </div>
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">Add</button>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        </div>
+    </form>
+    <div class="panel default-panel data-for-send">Send data to server: {{ addRecipeForm.value | json}}</div>
+</div>
